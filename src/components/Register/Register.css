@@ -1,0 +1,68 @@
+.form-section{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.66);
+    z-index:1000;
+    display: flex;
+    scroll-behavior: none;
+}
+
+.form-container{
+    place-self: center;
+    display: grid;
+    margin: auto;
+    width: fit-content;
+    background-color: white;
+    padding: 5px 0 0;
+    border-radius: 10px;
+}
+
+.corss-button{
+    width: 28px;
+    padding: 5px;
+    margin: 4px;
+}
+
+.signup-signin-view-toggle-buttons{
+    border-bottom: 2px solid rgb(51, 194, 156);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+}
+
+.signup-signin-view-toggle-buttons button{
+    width: 212px;
+    height: 40px;
+    background-color:inherit;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.signup-signin-view-toggle-buttons  .active{
+    width: 212px;
+    height: 40px;
+    background-color:rgb(51, 194, 156);
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    border: none;
+    overflow: hidden;
+}
+
+
+.signup-signin-form-container{
+    padding: 0 40px 30px 40px;
+    border: 2px solid rgba(0, 0, 0, 0.109);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top: none;
+    overflow: hidden;
+}

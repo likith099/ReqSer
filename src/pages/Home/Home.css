@@ -1,0 +1,64 @@
+.explore-display-srvice-sections{
+    display: flex;
+}
+
+.service-display-section{
+    width: 100%;
+    margin-left: 30px;
+    padding-right: 40px;
+    overflow: hidden;
+}
+
+.view-toggle-buttons{
+    background-color: white;
+    z-index: 1;
+    position: sticky;
+    top: 70px;
+    margin-top: 20px;
+    border-bottom: 3px solid rgb(61, 224, 180);
+}
+
+.view-toggle-buttons button{
+    width: 200px;
+    height: 40px;
+    background-color: inherit;
+    border: none;
+    border-radius: 4px 4px 0 0;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.view-toggle-buttons .active{
+    background-color: rgb(61, 224, 180);
+    transition: 0.3s;
+    color: white;
+}
+
+@media (max-width:1050px) {
+    
+    .view-toggle-buttons{
+        top:63px;
+    }
+}
+
+@media (max-width:900px) {
+    
+    .view-toggle-buttons{
+        top:55px;
+    }
+}
+
+@media (max-width:750px) {
+    
+    .view-toggle-buttons{
+        top:50px;
+    }
+}
+
+@media (max-width:550px) {
+    
+    .view-toggle-buttons{
+        top:72px;
+    }
+}

@@ -1,0 +1,54 @@
+.explore-services{
+    width: fit-content;
+    display: flex;
+    position: sticky;
+    top: 135px;
+    flex-direction: column;
+    border-radius: 5px;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #eeeeee;
+
+}
+
+.explore-services h2{
+    text-align: left;
+}
+
+.explore-services-list{
+    width: 320px; 
+}
+
+.explore-services-list::-webkit-scrollbar{
+    display: block;
+}
+
+.explore-services-list-items p{
+    border-radius: 5px;
+    padding: 10px 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight:500;
+    text-overflow: ellipsis;
+    width: fill; /* Adjust width as needed */
+    transition: 0.3s;
+
+}
+.explore-services-list-items p:hover{
+    background-color: rgb(61, 224, 180);
+}
+
+.explore-services-list-items .active{
+    background-color: rgb(61, 224, 180);
+    transition: 0.3s;
+}
+
+@media (max-width:1050px) {
+
+    .explore-services-list{
+        width: 240px; 
+    }
+    
+}
+
