@@ -29,12 +29,14 @@ const App = () => {
     {showRegister? <Register setShowRegister ={setShowRegister} setIsAuthenticated={setIsAuthenticated} setUser={setUser} />:<></>}
     <Navbar setShowRegister ={setShowRegister} isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} setUser={setUser} />
     <div className='app'>
-      <Routes  basename="/ReqSer/">
+      <Router basename="/ReqSer">
+      <Routes>
         <Route path='/' element = {<Home />} />
         <Route path='/request' element = {<Request />} />
         <Route path='/offerservice' element = {<OfferService />} />
         <Route path='/my-profile/:id' element = {<UserProfile setIsAuthenticated={setIsAuthenticated}/>}/>
       </Routes>
+      </Router>
     </div>
     <Footer />
     </>
