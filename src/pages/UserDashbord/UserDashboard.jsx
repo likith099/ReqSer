@@ -3,7 +3,14 @@ import './UserDashbort.css'
 
 const UserDashboard = () => {
   return (
-    <div>UserDashbort</div>
+    <div className="profile_main">
+      <div className="dashboard_left">
+
+      </div>
+      <div className="dashboard_right">
+
+      </div>
+    </div>
   )
 }
 
