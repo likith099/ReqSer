@@ -36,7 +36,7 @@ const App = () => {
         <Route path='/request' element = {<Request />} />
         <Route path='/offerservice' element = {<OfferService />} />
         <Route path='/my-profile/:id' element = {<UserProfile setIsAuthenticated={setIsAuthenticated}/>}/>
-        <Route path='/my-dashboard/:id' element = {<UserDashboard />}/>
+        <Route path='/my-dashboard' element = {<UserDashboard />}/>
       </Routes>
     </div>
     <Footer />

@@ -8,7 +8,7 @@ const UserDashboard = () => {
       Dashboard
       </div>
       <div className="dashboard_right">
-
+      Dashboard
       </div>
     </div>
   )
