@@ -56,6 +56,11 @@
     font-size: 24px;
     font-weight: bold;
   }
+
+  .header_right{
+    display: flex;
+    gap: 40px;
+  }
   
   .header_right .logout_btn {
     background: none;

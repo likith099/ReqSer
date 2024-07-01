@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer'
 import Register from './components/Register/Register'
 import UserProfile from './pages/UserProfile/UserProfile'
 import { user_list } from './assets/users'
+import UserDashboard from './pages/UserDashbord/UserDashboard'
 
 
 const App = () => {
@@ -35,6 +36,7 @@ const App = () => {
         <Route path='/request' element = {<Request />} />
         <Route path='/offerservice' element = {<OfferService />} />
         <Route path='/my-profile/:id' element = {<UserProfile setIsAuthenticated={setIsAuthenticated}/>}/>
+        <Route path='/my-dashboard/:id' element = {<UserDashboard />}/>
       </Routes>
     </div>
     <Footer />

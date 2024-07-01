@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { user_list } from '../../assets/users';
 import './UserProfile.css';
 import { assets } from '../../assets/assets';
@@ -39,6 +39,8 @@ const UserProfile = ({setIsAuthenticated}) => {
         navigate(`/`);
       };
 
+
+
     return (
         <div className="profile_main">
             <div className="profile_header">
@@ -56,6 +58,7 @@ const UserProfile = ({setIsAuthenticated}) => {
                             <span className="user_name">{userInfo.first_name} {userInfo.last_name}</span>
                         </div>
                         <div className="header_right">
+                        <Link to="/my-dashboard" className='dropdown-item'>My Dashboard</Link>
                             <button className="logout_btn" onClick={handleSignOut}>
                                 Sign Out
                             </button>
