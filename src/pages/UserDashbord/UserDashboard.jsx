@@ -5,10 +5,10 @@ const UserDashboard = () => {
   return (
     <div className="profile_main">
       <div className="dashboard_left">
-      Dashboard
+        Dashboard
       </div>
       <div className="dashboard_right">
-      Dashboard
+        Dashboard
       </div>
     </div>
   )
