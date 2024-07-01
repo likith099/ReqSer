@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from './components/Navbar/Navbar'
-import { Route, Router, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home/Home'
 import Request from './pages/Request/Request'
 import OfferService from './pages/OfferService/OfferService'
@@ -30,7 +30,7 @@ const App = () => {
     {showRegister? <Register setShowRegister ={setShowRegister} setIsAuthenticated={setIsAuthenticated} setUser={setUser} />:<></>}
     <Navbar setShowRegister ={setShowRegister} isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} setUser={setUser} />
     <div className='app'>
-      
+      <Router basename="/ReqSer">
       <Routes>
         <Route path='/' element = {<Home />} />
         <Route path='/request' element = {<Request />} />
@@ -38,6 +38,7 @@ const App = () => {
         <Route path='/my-profile/:id' element = {<UserProfile setIsAuthenticated={setIsAuthenticated}/>}/>
         <Route path='/my-dashboard' element = {<UserDashboard />}/>
       </Routes>
+      </Router>
     </div>
     <Footer />
     </>
