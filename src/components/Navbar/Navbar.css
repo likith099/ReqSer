@@ -1,5 +1,6 @@
 body{
     width: 100%;
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -129,7 +130,7 @@ body{
   }
   
   .dropdown-menu {
-    display: flex;
+    display: none;
     width: 160px;
     height: 200px;
     flex-direction: column;
@@ -298,6 +299,11 @@ body{
     .hamburger-menu {
         z-index: 1002; 
         display: block;
+    }
+
+    .dropdown-menu{
+        display: flex;
+
     }
 
     .navbar-search {
