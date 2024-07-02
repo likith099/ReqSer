@@ -1,0 +1,113 @@
+.how-it-works-body{
+    padding: 10px 0;
+}
+.section-top-header{
+    display: flex;
+    justify-content:space-around;
+    width: 100%;
+    height: 520px;
+}
+
+.section-top-left{
+    display: inline;
+    padding: 24px;
+    width: 35%;
+    background-image: linear-gradient(-200deg, #19AA81 0, #127770 83%, #106D6D 100%);
+    color: #fff;
+}
+.section-top-left p{
+    padding: 5px 20px 10px;
+    line-height: 2;
+    letter-spacing: 2.2px;
+}
+.section-top-left h1{
+    padding: 20px 20px;
+    margin: 20px 0;
+    border-top: 1px solid rgb(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgb(255, 255, 255, 0.5);
+    font-size:2.25em;
+    height: 280px;
+    line-height: 1.2;
+    letter-spacing: 1.8px;
+}
+
+.section-left-button{
+    display: flex;
+    justify-content: right;
+
+}
+
+.section-top-left .cta-button{
+    margin-top: 20px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-color: rgb(40, 150, 120, 0);
+    border: 1.2px solid white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.section-top-left .cta-button:hover{
+  color: rgb(40, 150, 120);
+    background-color: white;
+}
+
+.section-top-right{
+    width: 65%;
+}
+.section-top-right img{
+    width: 100%;
+    height: 100%;
+}
+
+.section-body-part{
+    padding-top: 50px !important;
+    background-color: #f7f7f7;
+}
+
+.card-row {
+    display: grid;
+    justify-content: center;
+    gap: 20px;
+    width:100%;
+    
+  }
+  
+  .card {
+    width: 920px;
+    background: #fff;
+    padding: 20px;
+    background-color: inherit;
+    
+  }
+  
+  .card-body {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  .card-description{
+    max-width: 50%;
+  }
+  
+  .card-title {
+    font-size: 2vw;
+    margin-bottom: 15px;
+    color: #19AA81;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    color:#106D6D;
+  }
+
+  .card-body img{
+    width: 30%;
+    height: 15%;
+    border-radius: 10px;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1), -8px -8px 8px rgba(255, 255, 255, 1);
+  }

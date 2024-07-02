@@ -73,13 +73,15 @@
     border: none;
     border-radius: 20px;
     color: white;
-    background-color: rgb(40, 150, 120, 0.8);
+    background-color: rgb(40, 150, 120, 0);
+    border: 1px solid white;
     font-weight: bold;
     transition: 0.3s;
 }
 
 .hero-content .cta-button:hover{
-    background-color: rgb(40, 150, 120);
+  color: rgb(40, 150, 120);
+    background-color: white;
 }
 
 @media (max-width:1050px) {

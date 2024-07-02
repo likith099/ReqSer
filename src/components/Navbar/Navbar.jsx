@@ -62,7 +62,7 @@ const Navbar = ({ setShowRegister, isAuthenticated, setIsAuthenticated, user }) 
               {dropdownOpen && (
                 <div className='dropdown-menu'>
                   <Link to='/my-profile/1' className='dropdown-item'>My Profile</Link>
-                  <Link to="/my-dashboard" className='dropdown-item'>My Dashboard</Link>
+                  <Link to="/my-dashboard/1" className='dropdown-item'>My Dashboard</Link>
                   <button className='dropdown-item' onClick={handleSignOut}>Sign Out</button>
                 </div>
               )}

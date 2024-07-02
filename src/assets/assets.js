@@ -8,6 +8,11 @@ import cross from './cross.png';
 import profile_icon from './profile_icon.png';
 import back_button from './back_button.png';
 
+import signup_image from './Signup-image.png';
+import request_form_image from './Reqisst_form_image.png';
+import explore_service_image from './Explore-services-image.png'
+import chat_image from './Chat_image.png'
+
 import image_plumbing from './Service-images/plumbing.jpeg';
 import image_electrical from './Service-images/electrical.jpeg';
 import image_hvac from './Service-images/hvac.jpeg';
@@ -44,7 +49,11 @@ export const assets= {
     search_icon,
     cross,
     profile_icon,
-    back_button
+    back_button,
+    signup_image,
+    request_form_image,
+    explore_service_image,
+    chat_image
 }   
 
 
