@@ -1,10 +1,10 @@
 // AuthContext.js
 import React, { createContext, useState, useContext } from 'react';
-import { user_list } from './user_list'; // Import your user list
+import { user_list } from '../assets/users'; 
 
 const AuthContext = createContext();
 
-export const AuthProvider = ({ children }) => {
+const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
 
   const login = (email, password) => {
@@ -26,3 +26,4 @@ export const AuthProvider = ({ children }) => {
 };
 
 export const useAuth = () => useContext(AuthContext);
+export default AuthProvider;

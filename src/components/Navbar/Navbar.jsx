@@ -4,9 +4,10 @@ import Mylogo from '../../assets/requestLogo.svg';
 import { assets } from '../../assets/assets';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import LocationModal from '../LocationModel/LocationModel';
-import { user_list } from '../../assets/users';
+import { useAuth } from '../../context/AuthContext'; // Import useAuth hook
 
-const Navbar = ({ setShowRegister, isAuthenticated, setIsAuthenticated, user }) => {
+const Navbar = ({ setShowRegister, isAuthenticated }) => {
+  const { logout, currentUser } = useAuth(); // Use currentUser and logout functions from AuthContext
   const location = useLocation();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -23,14 +24,14 @@ const Navbar = ({ setShowRegister, isAuthenticated, setIsAuthenticated, user }) 
   };
 
   const handleSignOut = () => {
-    setIsAuthenticated(false);
+    logout(); // Call logout function from AuthContext
     setDropdownOpen(false);
-    navigate(`/`);
+    navigate('/');
   };
 
   const toggleLocationModalOpen = () => {
     setLocationModalOpen(!locationModalOpen);
-  }
+  };
 
   const handleLocationSave = (location) => {
     setUserLocation(location);
@@ -42,12 +43,14 @@ const Navbar = ({ setShowRegister, isAuthenticated, setIsAuthenticated, user }) 
       <div className='logo-section'>
         <img src={Mylogo} alt="logo" className='logo' />
       </div>
-        <div className='navbar-search'>
-          <input type='text' placeholder='Find your service here' className='search-bar' />
-          <button className='search-button'><div className='search-text'>Search</div></button>
-          <a href="#" className='location' onClick={toggleLocationModalOpen}>{userLocation.city && userLocation.state ? `${userLocation.city}, ${userLocation.state}` : 'Your Location'}</a>
-        </div>
-      
+      <div className='navbar-search'>
+        <input type='text' placeholder='Find your service here' className='search-bar' />
+        <button className='search-button'><div className='search-text'>Search</div></button>
+        <a href="#" className='location' onClick={toggleLocationModalOpen}>
+          {userLocation.city && userLocation.state ? `${userLocation.city}, ${userLocation.state}` : 'Your Location'}
+        </a>
+      </div>
+
       <div className='navbar-right'>
         <img src={assets.search_icon} alt="search" className='navbar-searchicon' />
         <ul className={`navbar-menu ${sidebarOpen ? 'open' : ''}`}>
@@ -61,13 +64,13 @@ const Navbar = ({ setShowRegister, isAuthenticated, setIsAuthenticated, user }) 
               <img src={assets.profile_icon} alt="profile" className='profile-icon' onClick={toggleDropdown} />
               {dropdownOpen && (
                 <div className='dropdown-menu'>
-                  <Link to='/my-profile/1' className='dropdown-item'>My Profile</Link>
-                  <Link to="/my-dashboard/1" className='dropdown-item'>My Dashboard</Link>
+                  <Link to='/my-profile' className='dropdown-item'>My Profile</Link>
+                  <Link to="/my-dashboard" className='dropdown-item'>My Dashboard</Link>
                   <button className='dropdown-item' onClick={handleSignOut}>Sign Out</button>
                 </div>
               )}
             </div>
-          )}      
+          )}
         </ul>
       </div>
       <div className='hamburger-menu' onClick={toggleSidebar}>
@@ -80,6 +83,6 @@ const Navbar = ({ setShowRegister, isAuthenticated, setIsAuthenticated, user }) 
       />
     </nav>
   );
-}
+};
 
 export default Navbar;

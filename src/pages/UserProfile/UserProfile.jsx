@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { user_list } from '../../assets/users';
 import './UserProfile.css';
-import { assets } from '../../assets/assets';
+import { useAuth } from '../../context/AuthContext'; // Import useAuth hook
 
-const UserProfile = ({setIsAuthenticated}) => {
-    const { id } = useParams();
-    const user = user_list.find(user => user.id === parseInt(id));
+
+const UserProfile = () => {
+    const { currentUser, logout } = useAuth(); // Access currentUser and logout from AuthContext
     const navigate = useNavigate();
 
     const [editable, setEditable] = useState({
@@ -19,9 +19,7 @@ const UserProfile = ({setIsAuthenticated}) => {
         description: false,
     });
 
-    const [userInfo, setUserInfo] = useState(user);
-
-    if (!user) {
+    if (!currentUser) {
         return <div>User not found</div>;
     }
 
@@ -35,9 +33,9 @@ const UserProfile = ({setIsAuthenticated}) => {
     };
 
     const handleSignOut = () => {
-        setIsAuthenticated(false);
-        navigate(`/`);
-      };
+        logout(); // Call logout function from AuthContext
+        navigate('/');
+    };
 
 
 
@@ -54,8 +52,8 @@ const UserProfile = ({setIsAuthenticated}) => {
                     </div>
                     <div className="profile_header_bottom">
                         <div className="header_left">
-                            <span className="user_badge">{userInfo.first_name[0]}{userInfo.last_name[0]}</span>
-                            <span className="user_name">{userInfo.first_name} {userInfo.last_name}</span>
+                            <span className="user_badge">{currentUser.first_name[0]}{currentUser.last_name[0]}</span>
+                            <span className="user_name">{currentUser.first_name} {currentUser.last_name}</span>
                         </div>
                         <div className="header_right">
                         <Link to="/my-dashboard" className='dropdown-item'>My Dashboard</Link>
@@ -85,7 +83,7 @@ const UserProfile = ({setIsAuthenticated}) => {
                                     <div className="card_list">
                                         <ProfileDataCard
                                             title="EMAIL ADDRESS"
-                                            value={userInfo.email}
+                                            value={currentUser.email}
                                             editable={editable.email}
                                             onEdit={() => handleEditClick('email')}
                                             onChange={handleChange}
@@ -93,7 +91,7 @@ const UserProfile = ({setIsAuthenticated}) => {
                                         />
                                         <ProfileDataCard
                                             title="Phone Number"
-                                            value={userInfo.mobile_number}
+                                            value={currentUser.mobile_number}
                                             editable={editable.mobileNumber}
                                             onEdit={() => handleEditClick('mobileNumber')}
                                             onChange={handleChange}
@@ -101,7 +99,7 @@ const UserProfile = ({setIsAuthenticated}) => {
                                         />
                                         <ProfileDataCard
                                             title="RESIDENTIAL ADDRESS"
-                                            value={userInfo.address}
+                                            value={currentUser.address}
                                             editable={editable.address}
                                             onEdit={() => handleEditClick('address')}
                                             onChange={handleChange}
@@ -109,7 +107,7 @@ const UserProfile = ({setIsAuthenticated}) => {
                                         />
                                         <ProfileDataCard
                                             title="Country"
-                                            value={userInfo.country}
+                                            value={currentUser.country}
                                             editable={editable.country}
                                             onEdit={() => handleEditClick('country')}
                                             onChange={handleChange}
@@ -117,7 +115,7 @@ const UserProfile = ({setIsAuthenticated}) => {
                                         />
                                         <ProfileDataCard
                                             title="Description"
-                                            value={userInfo.description}
+                                            value={currentUser.description}
                                             editable={editable.description}
                                             onEdit={() => handleEditClick('description')}
                                             onChange={handleChange}
