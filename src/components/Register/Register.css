@@ -29,6 +29,8 @@
 }
 
 .signup-signin-view-toggle-buttons{
+    display: flex;
+    flex-direction: row;
     border-bottom: 2px solid rgb(51, 194, 156);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
