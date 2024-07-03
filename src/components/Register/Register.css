@@ -73,6 +73,10 @@
 
 @media (max-width:750px){
     .signup-signin-view-toggle-buttons button{
-        width: 192px;
+        width: 180px;
+    }
+
+    .signup-signin-view-toggle-buttons  .active{
+        width: 100%;
     }
 }

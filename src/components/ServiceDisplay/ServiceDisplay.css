@@ -28,12 +28,3 @@
     
 }
 
-@media (max-width:550px) {
-    .service-display-list{
-        display: flex;
-        flex-direction: column;
-    }
-
-    
-    
-}
