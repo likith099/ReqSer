@@ -17,3 +17,23 @@
     row-gap: 20px;
 
 }
+
+@media (max-width:750px) {
+    .service-display-list{
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+    
+}
+
+@media (max-width:550px) {
+    .service-display-list{
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+    
+}

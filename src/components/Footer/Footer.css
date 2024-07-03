@@ -79,3 +79,36 @@
   @media (max-width: 900px) {
 
   }
+
+  @media (max-width: 550px) {
+    .footer{
+        padding: 5px 5px;
+    }
+
+    .footer-container{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .footer-section{
+        font-size: 12px;
+    }
+
+
+    .footer-section ul{
+        display: block;
+    }
+
+    .footer-section ul li{
+        padding: 5px 0;
+    }
+    .footer-social{
+        display: block;
+    }
+
+    .footer-section .social-links{
+        margin-top: 20px;
+    }
+
+  }

@@ -1,9 +1,13 @@
 .explore-display-srvice-sections{
     display: flex;
+    
 }
 
 .service-display-section{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    top: 100px;
     margin-left: 30px;
     padding-right: 40px;
     overflow: hidden;
@@ -50,6 +54,10 @@
 }
 
 @media (max-width:750px) {
+    .explore-display-srvice-sections{
+        display: block;
+        
+    }
     
     .view-toggle-buttons{
         top:50px;
@@ -57,8 +65,12 @@
 }
 
 @media (max-width:550px) {
+    .explore-display-srvice-sections{
+        display: block;
+        
+    }
     
     .view-toggle-buttons{
-        top:72px;
+        top:0;
     }
 }

@@ -13,7 +13,7 @@ const Home = () => {
 
   return (
     <div >
-      <Header />
+      
       <div className='view-toggle-buttons'>
         <button
         className={view === "services" ? "active" : ""}

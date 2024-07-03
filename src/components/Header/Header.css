@@ -4,6 +4,7 @@
     height: 34vw;
     margin: auto;
     background: url('header-image.jpeg') no-repeat;
+    background-color: linear-gradient(-200deg, #19AA81 0, #127770 83%, #106D6D 100%);
     background-size: 100%;
     border-radius: 20px;
     display: flex;

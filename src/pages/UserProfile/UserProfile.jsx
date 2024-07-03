@@ -44,11 +44,7 @@ const UserProfile = () => {
             <div className="profile_header">
                 <div className="profile_container">
                     <div className="profile_header_top">
-                        <div className="header_back">
-                            <a className="profileBackBtn">
-                                <h1>My Account</h1>
-                            </a>
-                        </div>
+                        <h2>MY ACCOUNT</h2>
                     </div>
                     <div className="profile_header_bottom">
                         <div className="header_left">

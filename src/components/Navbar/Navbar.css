@@ -1,7 +1,4 @@
-body{
-    width: 100%;
-    overflow-x: hidden;
-}
+
 
 .navbar {
     background-color: white;
@@ -73,6 +70,23 @@ body{
     display: flex;
     align-items: center;
 }
+.navbar-right .signupin {
+    padding: 9px 18px;
+    margin-left: 20px;
+    background-color: inherit ;
+    border: 2px solid rgb(51, 194, 156);
+    border-radius: 18px;
+    transition: 0.2s;
+    width: 120px;
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(51, 194, 156);
+    
+}
+.navbar-right .signupin:hover {
+    background-color: rgb(51, 194, 156);
+    color: rgb(255, 255, 255);
+}
 
 .navbar-searchicon {
     width: 24px;
@@ -90,17 +104,9 @@ body{
     color: rgb(51, 194, 156);
 }
 
-.navbar-menu .signupin {
-    padding: 9px 18px;
-    background-color: rgb(240, 240, 240);
-    border-radius: 18px;
-    transition: 0.2s;
-}
 
-.navbar-menu .signupin:hover {
-    background-color: rgb(220, 220, 220);
-    color: black;
-}
+
+
 
 .navbar-menu .account {
     display: flex;
@@ -118,7 +124,8 @@ body{
     display: inline-block;
     width: fit-content;
     padding: 5px 10px;
-    background-color: rgb(234, 234, 234);
+    margin-left: 20px;
+    border: 2px solid rgb(51, 194, 156);
     border-radius: 20px;
     cursor: pointer;
   }
@@ -130,7 +137,7 @@ body{
   }
   
   .dropdown-menu {
-    display: none;
+    display: flex;
     width: 160px;
     height: 200px;
     flex-direction: column;
@@ -175,6 +182,10 @@ body{
   }
 
 @media (max-width: 1050px) {
+    .navbar{
+        width: 100%;
+    }
+
     .navbar .logo {
         width: 180px;
         height: 40px;
@@ -197,6 +208,10 @@ body{
 }
 
 @media (max-width: 900px) {
+    .navbar{
+        width: 100%;
+    }
+
     .navbar .logo {
         width: 120px;
         height: 30px;
@@ -228,6 +243,10 @@ body{
 }
 
 @media (max-width: 750px) {
+    .navbar{
+        width: 100%;
+    }
+
     .navbar .logo-section {
         width: 140px;
     }
@@ -259,15 +278,23 @@ body{
 }
 
 @media (max-width: 550px) {
+    html, body {
+        overflow-x: hidden;
+      }
+
+      .navbar{
+        width: 100%;
+    }
+
     .navbar .logo-section {
         width: auto;
     }
 
     .navbar-menu {
-        display:flex;
+        display:none;
         position: fixed;
         top: 0;
-        right: 0;
+        left: 0;
         height: 360px;
         width: 250px;
         background-color: white;
@@ -277,8 +304,6 @@ body{
         text-align: center;
         padding: 0 30px;
         box-shadow: -10px 0 35px rgba(0, 0, 0, 0.1);
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
         padding-top: 50px; /* Adjust based on your navbar height */
         z-index: 1; /* Above navbar */
     }
@@ -289,6 +314,21 @@ body{
         justify-content: center;
         padding: 10px 30px;
         font-size: 16px;
+    }
+
+    .navbar-right .signupin {
+        padding: 8px 10px;
+        width: 74px;
+        background-color: inherit;
+        border: 2px solid rgb(51, 194, 156);
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 700;
+        color: rgb(51, 194, 156);
+    }
+
+    .location{
+        display: none;
     }
 
     .navbar-menu.open {

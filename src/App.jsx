@@ -40,12 +40,13 @@ const App = () => {
       ) : (
         <></>
       )}
+      
+      <div className="app">
       <Navbar
         setShowRegister={setShowRegister}
         isAuthenticated={isAuthenticated}
         setIsAuthenticated={setIsAuthenticated}
       />
-      <div className="app">
         <Routes>
           <Route path='/ReqSer' element={<ReqSer />} />
           <Route path="/" element={<Home />} />
