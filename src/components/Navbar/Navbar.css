@@ -104,10 +104,6 @@
     color: rgb(51, 194, 156);
 }
 
-
-
-
-
 .navbar-menu .account {
     display: flex;
 }
@@ -131,9 +127,8 @@
   }
   
   .profile-icon {
-    width: fit-content;
+    width: 24px;
     height: 24px;
-    
   }
   
   .dropdown-menu {
