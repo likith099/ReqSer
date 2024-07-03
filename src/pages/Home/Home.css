@@ -33,11 +33,17 @@
     transition: 0.3s;
 }
 
+.view-toggle-buttons button{
+    color: black;
+}
+
 .view-toggle-buttons .active{
     background-color: rgb(61, 224, 180);
     transition: 0.3s;
     color: white;
 }
+
+
 
 @media (max-width:1050px) {
     
@@ -62,6 +68,11 @@
     .view-toggle-buttons{
         top:50px;
     }
+
+    .view-toggle-buttons button{
+        width: 180px;
+
+    }
 }
 
 @media (max-width:550px) {
@@ -72,5 +83,10 @@
     
     .view-toggle-buttons{
         top:0;
+    }
+
+    .view-toggle-buttons button{
+        width: 160px;
+
     }
 }

@@ -66,3 +66,9 @@
     border-top: none;
     overflow: hidden;
 }
+
+@media (max-width:750px){
+    .signup-signin-view-toggle-buttons button{
+        width: 192px;
+    }
+}
