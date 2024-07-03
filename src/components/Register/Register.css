@@ -39,11 +39,13 @@
     width: 212px;
     height: 40px;
     background-color:inherit;
+    color: black;
     font-size: 14px;
     font-weight: 500;
     border: none;
     overflow: hidden;
     transition: 0.3s;
+
 }
 
 .signup-signin-view-toggle-buttons  .active{
