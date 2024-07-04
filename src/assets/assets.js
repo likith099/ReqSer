@@ -7,6 +7,7 @@ import search_icon from './search.png';
 import cross from './cross.png';
 import profile_icon from './profile_icon.png';
 import back_button from './back_button.png';
+import add_icon from './add_icon.png'
 
 import signup_image from './Signup-image.png';
 import request_form_image from './Reqisst_form_image.png';
@@ -53,7 +54,8 @@ export const assets= {
     signup_image,
     request_form_image,
     explore_service_image,
-    chat_image
+    chat_image,
+    add_icon
 }   
 
 

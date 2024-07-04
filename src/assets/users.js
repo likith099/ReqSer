@@ -12,8 +12,8 @@ export const user_list = [
     },
     {
       id: 2,
-      email: "user@example.com",
-      password: "userpass",
+      email: "admin2",
+      password: "admin2",
       first_name: "John",
       last_name: "Doe",
       country: "User Country",

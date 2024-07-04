@@ -6,15 +6,21 @@ import { BrowserRouter } from 'react-router-dom'
 import ServiceContextProvider from './context/ServiceContents.jsx'
 import RequestContextProvider from './context/RequestContents.jsx'
 import AuthProvider from './context/AuthContext.jsx'
+import DashboardRequestContextProvider from './context/DashboardRequestContents.jsx'
+import DashboardServicesContextProvider from './context/DashboardServiceContents.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
-  <AuthProvider>
-    <ServiceContextProvider>
-      <RequestContextProvider>
-        <App />
-      </RequestContextProvider>
-    </ServiceContextProvider>
+    <AuthProvider>
+      <DashboardRequestContextProvider>
+        <DashboardServicesContextProvider>
+          <ServiceContextProvider>
+            <RequestContextProvider>
+              <App />
+            </RequestContextProvider>
+          </ServiceContextProvider>
+        </DashboardServicesContextProvider>
+      </DashboardRequestContextProvider>
     </AuthProvider>
   </BrowserRouter>
 )

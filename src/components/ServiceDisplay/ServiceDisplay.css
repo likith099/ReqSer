@@ -1,3 +1,5 @@
+
+
 .service-display{
     margin-top: 30px;
     overflow-y: auto;
@@ -11,7 +13,7 @@
 
 .service-display-list{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     margin-top: 30px;
     gap: 20px;
     row-gap: 20px;
@@ -19,11 +21,32 @@
 }
 
 @media (max-width:750px) {
+    .service-display{
+        margin-top: 20px;
+        overflow-y: auto;
+    }
+
+
     .service-display-list{
         display: flex;
         flex-direction: column;
+        margin-top: 10px;
     }
 
+    .service-display h2{
+        font-size: max(2vw, 20px);
+        font-weight: 600;
+        margin-left: 14px;
+    }
+
+    .service-display-list{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        margin-top: 10px;
+        gap: 0;
+        row-gap: 10px;
+    
+    }
     
     
 }
