@@ -22,6 +22,15 @@ form h2{
     outline: 2px solid rgb(170, 170, 170);
     border-radius: 2px;
 }
+
+.form-item PhoneInput{
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: none;
+    outline: 2px solid rgb(170, 170, 170);
+    border-radius: 2px;
+}
 .form-item{
     display:grid;
     padding-bottom: 15px;
@@ -51,6 +60,7 @@ form h2{
 
 .react-tel-input .form-control{
     border: none !important;
+    width: 100% !important;;
 }
 
 .checkbox-input{
