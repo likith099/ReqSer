@@ -1,5 +1,5 @@
 .explore-services{
-    width: fit-content;
+    width: 300px;
     display: flex;
     position: sticky;
     flex-direction: column;
@@ -16,7 +16,7 @@
 }
 
 .explore-services-list{
-    width: 320px; 
+    width: 100%; 
 }
 
 .explore-services-list::-webkit-scrollbar{

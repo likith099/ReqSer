@@ -45,6 +45,7 @@ const SignIn = ({ setShowRegister, setIsAuthenticated, setUser }) => {
             className="custom-input-signup"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            required
           />
         </div>
         {error && <p className='error-message'>{error}</p>}

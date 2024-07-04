@@ -15,7 +15,7 @@ const SignUp = () => {
         <h2>Sign Up</h2>
         <div className="mb-3-first-last-name">
           <input placeholder="First name" type="text" id="formBasicFirstN" className="custom-input-signup firstname" required />
-          <input placeholder="Last name" type="text" id="formBasicLastN" className="custom-input-signup lastname" />
+          <input placeholder="Last name" type="text" id="formBasicLastN" className="custom-input-signup lastname"  required/>
         </div>
         <div className="mb-3">
           <input placeholder="Email" type="email" id="formBasicEmail" className="custom-input-signup" />
