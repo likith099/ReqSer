@@ -30,6 +30,7 @@
   font-weight: 600;
   border-right: 3px solid rgb(51, 194, 156, 0);
   transition: 0.3s ease-in-out;
+  color: rgba(0, 0, 0, 0.709);
 
 }
 
@@ -39,10 +40,6 @@
   font-size: 18px;
   color: rgb(51, 194, 156);
   transition: 0.3s ease-in-out;
-}
-
-.service-display-section{
-  width: 100%;
 }
 
 @media (max-width: 750px) {
@@ -60,6 +57,7 @@
   .dashboard-view-toggle-buttons button{
     border-bottom: 3px solid rgb(51, 194, 156, 0);
     border-right: none;
+    width: 180px;
 
   }
   .dashboard-view-toggle-buttons .active{

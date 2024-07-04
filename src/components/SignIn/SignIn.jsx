@@ -26,7 +26,7 @@ const SignIn = ({ setShowRegister, setIsAuthenticated, setUser }) => {
     <div>
       <form onSubmit={handleSignIn}>
         <h2>Sign In</h2>
-        <div className="mb-3-first-last-name">
+        <div className="form-item">
           <input
             placeholder="Email address"
             type="text"
@@ -37,7 +37,7 @@ const SignIn = ({ setShowRegister, setIsAuthenticated, setUser }) => {
             required
           />
         </div>
-        <div className="mb-3">
+        <div className="form-item">
           <input
             placeholder="Password"
             type="password"

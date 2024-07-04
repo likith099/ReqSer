@@ -13,31 +13,31 @@ const SignUp = () => {
   return (
     <form>
         <h2>Sign Up</h2>
-        <div className="mb-3-first-last-name">
-          <input placeholder="First name" type="text" id="formBasicFirstN" className="custom-input-signup firstname" required />
-          <input placeholder="Last name" type="text" id="formBasicLastN" className="custom-input-signup lastname"  required/>
+        <div className="form-item-names">
+          <input placeholder="First name" type="text" id="formBasicFirstN" className="form-input firstname" required />
+          <input placeholder="Last name" type="text" id="formBasicLastN" className="form-input lastname"  required/>
         </div>
-        <div className="mb-3">
-          <input placeholder="Email" type="email" id="formBasicEmail" className="custom-input-signup" />
+        <div className="form-item">
+          <input placeholder="Email" type="email" id="formBasicEmail" className="form-input" />
         </div>
-        <div className="mb-3">
+        <div className="form-item">
           <PhoneInput 
           placeholder="Mobile Number"
           type="text"
           id="formBasicNumber"
           country = {"us"}
-          className="custom-input-signup-phonenumber" />
+          className="form-input-phonenumber" />
         </div>
-        <div className="mb-3">
-          <input placeholder="mm/dd/yyyy" type="date" id="formBasicDOB" className="custom-input-signup" />
+        <div className="form-item">
+          <input placeholder="mm/dd/yyyy" type="date" id="formBasicDOB" className="form-input" />
         </div>
-        <div className="mb-3">
-          <input placeholder="Password" type="password" id="formBasicPassword" className="custom-input-signup" />
+        <div className="form-item">
+          <input placeholder="Password" type="password" id="formBasicPassword" className="form-input" />
         </div>
-        <div className="mb-3">
-          <input placeholder="Confirm Password" type="password" id="formBasicRePassword" className="custom-input-signup" />
+        <div className="form-item">
+          <input placeholder="Confirm Password" type="password" id="formBasicRePassword" className="form-input" />
         </div>
-        <div className="mb-3">
+        <div className="form-item-checkbox">
           <label>
             <input className="checkbox-input" id="cbxRterms" name="cbxRterms" value="" type="checkbox" />I Agree to ReqSer <a title="Terms and Conditions" href="/" >Terms and Conditions</a> and <a title="Privacy Policy" href="/" target="_blank">Privacy Policy</a></label>
         </div>

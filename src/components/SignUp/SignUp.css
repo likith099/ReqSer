@@ -1,42 +1,42 @@
 form{
-    width: 340px;
+    width: 100%;
 }
 form h2{
     padding: 20px 0;
 }
 
-.mb-3-first-last-name{
+.form-item-names{
     display:flex;
     justify-content: space-between;
+    gap: 10px;
     padding-bottom: 15px;
     font-size: 14px;
     font-weight: 500;
 }
 
-.mb-3{
+.form-item-names input{
+    width: 50%;
+    padding: 8px;
+    font-size: 14px;
+    border: none;
+    outline: 2px solid rgb(170, 170, 170);
+    border-radius: 2px;
+}
+.form-item{
     display:grid;
     padding-bottom: 15px;
     font-weight: 500;
 }
 
+.form-item input{
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: none;
+    outline: 2px solid rgb(170, 170, 170);
+    border-radius: 2px;
+}
 
-.custom-input-signup{
-    width: 100%;
-    padding: 8px;
-    font-size: 14px;
-    border: none;
-    outline: 2px solid rgb(170, 170, 170);
-    border-radius: 2px;
-}
-.firstname{
-    margin-right: 15px !important;
-    width: 100%;
-    padding: 8px;
-    font-size: 14px;
-    border: none;
-    outline: 2px solid rgb(170, 170, 170);
-    border-radius: 2px;
-}
 
 .custom-input-signup:focus{
     border: none;
@@ -75,6 +75,10 @@ form h2{
 @media (max-width:750px){
     form{
         width: 100%;
+    }
+
+    .react-tel-input .form-control{
+       width: 100%;
     }
 }
 

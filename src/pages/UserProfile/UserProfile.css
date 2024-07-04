@@ -26,6 +26,7 @@
   font-weight: 600;
   border-right: 3px solid rgb(51, 194, 156, 0);
   transition: 0.3s ease-in-out;
+  color: rgba(0, 0, 0, 0.774);
   }
 
   .profile-view-toggle-buttons .active{
@@ -54,6 +55,7 @@
     .profile-view-toggle-buttons button{
       border-bottom: 3px solid rgb(51, 194, 156, 0);
       border-right: none;
+      width: 180px;
   
     }
     .profile-view-toggle-buttons .active{
