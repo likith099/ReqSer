@@ -42,8 +42,7 @@
   }
   
   .expanded-service-item-img-container {
-    width: 360px;
-    text-align: left;
+    width: 77%;
   }
   
   .expanded-service-item-image {
@@ -105,9 +104,11 @@
     .expanded-service-item{
       display: block;
     }
-
+    .expanded-service-item-img-container {
+      width: 100%;
+    }
     .expanded-service-item-image{
-      width: 305px;
+      width: 100%;
       overflow: hidden;
     }
 
