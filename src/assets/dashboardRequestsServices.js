@@ -141,10 +141,10 @@ export const dashboard_saved = [
         user_mobile_number: "0987654321",
         user_address: "User Address",
         user_description: "This is a User account",
-        service_title: "Welding Services for Gate Repair",
-        service_image: image_legal,
-        service_description: "Hire a professional welder to repair your metal gate.",
-        service_category: "Welding"
+        service_title: "Graphic Designer for Logo Creation",
+        service_image: image_graphic_design,
+        service_description: "Professional graphic design services to create a unique logo for your business.",
+        service_category: "Graphic Design"
     },
 
 ]

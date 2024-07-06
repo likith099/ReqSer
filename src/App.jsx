@@ -14,6 +14,7 @@ import ReqSer from './pages/ReqSer/ReqSer';
 import { useAuth } from './context/AuthContext'; // Import useAuth hook
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 import ProtectedSignIn from './components/ProtectedRoute/ProtectedSignIn';
+import ResetPassword from './pages/ResetPassword/ResetPassword';
 
 const App = () => {
   const { currentUser, logout } = useAuth(); // Use currentUser and logout functions from AuthContext
@@ -42,28 +43,36 @@ const App = () => {
       ) : (
         <></>
       )}
-      
+
       <div className="app">
-      <Navbar
-        setShowRegister={setShowRegister}
-        isAuthenticated={isAuthenticated}
-        setIsAuthenticated={setIsAuthenticated}
-      />
+        <Navbar
+          setShowRegister={setShowRegister}
+          isAuthenticated={isAuthenticated}
+          setIsAuthenticated={setIsAuthenticated}
+        />
+
         <Routes>
           <Route path='/ReqSer' element={<ReqSer />} />
           <Route path="/" element={<Home />} />
-          <Route path="/sign-in" element={<ProtectedSignIn setShowRegister={setShowRegister}/>} />
+          <Route path="/sign-in" element={<ProtectedSignIn setShowRegister={setShowRegister} />} />
           <Route path="/request" element={<ProtectedRoute element={<RequestForm />} />} />
           <Route path="/offerservice" element={<ProtectedRoute element={<OfferService />} />} />
 
-              <Route
-                path="/my-profile"
-                element={<UserProfile setIsAuthenticated={setIsAuthenticated}/>} 
-              />
-              <Route
-                path="/my-dashboard"
-                element={<UserDashboard user={currentUser} setIsAuthenticated={setIsAuthenticated} />}
-              />
+          <Route
+            path="/my-profile"
+            element={<UserProfile setIsAuthenticated={setIsAuthenticated} />}
+          />
+          <Route
+            path="/my-dashboard"
+            element={<UserDashboard user={currentUser} setIsAuthenticated={setIsAuthenticated} />}
+          />
+
+          <Route
+            path='/ReqSer/reset-password'
+            element={<ResetPassword />}
+          />
+
+          <Route path="*" element={<Navigate to="/" />} />
 
 
         </Routes>

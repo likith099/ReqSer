@@ -2,10 +2,15 @@ import React, { useContext } from 'react'
 import { DashboardRequestContext } from '../../context/DashboardRequestContents'
 import DashboardItem from '../DashboardItems/DashboardItems'
 import './DashboardRequestDisplay.css'
-import { assets } from '../../assets/assets'
-
+import { assets } from '../../assets/assets'    
+import { useNavigate } from 'react-router-dom';
 
 const DashboardRequestDisplay = () => {
+
+    const navigate = useNavigate();
+    const navigateToRequest = () => {
+        navigate(`/request`);
+      };
 
     const { dashboard_requests } = useContext(DashboardRequestContext);
 
@@ -25,7 +30,7 @@ const DashboardRequestDisplay = () => {
 
                 })}
 
-                <div className='add-item'>
+                <div className='add-item' onClick={navigateToRequest}>
                     <div className='new-item-img-container'>
                         <img className="add-item-image" src={assets.add_icon} />
                         <p className='new-item-title'>Add Requst</p>

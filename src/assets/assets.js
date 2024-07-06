@@ -11,6 +11,7 @@ import add_icon from './add_icon.png'
 import save_icon from './save_icon.svg'
 import waiting from './waiting.png'
 import request_image from './request_image.png'
+import reset_password_image from './Reset_Password_image.png'
 
 import signup_image from './Signup-image.png';
 import request_form_image from './Reqisst_form_image.png';
@@ -61,7 +62,8 @@ export const assets= {
     add_icon,
     save_icon,
     waiting,
-    request_image
+    request_image,
+    reset_password_image
 }   
 
 

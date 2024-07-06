@@ -49,7 +49,7 @@ const SignIn = ({ setShowRegister, setIsAuthenticated, setUser }) => {
           />
         </div>
         {error && <p className='error-message'>{error}</p>}
-        <a href='/' className='forgot-password'>Forgot Password?</a>
+        <a href='/ReqSer/reset-password' className='forgot-password'>Forgot Password?</a>
         <button type="submit" className="signup-button">Sign In</button>
       </form>
     </div>

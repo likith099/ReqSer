@@ -11,8 +11,8 @@ const Register = ({ setShowRegister, setIsAuthenticated }) => {
   return (
     <div className='form-section'>
       <div className="form-container">
-        <div className='corss-button'>
-          <img onClick={() => setShowRegister(false)} src={assets.cross} width="20px" height="20px" />
+        <div className='corss-button' onClick={() => setShowRegister(false)}>
+          <img  src={assets.cross} width="20px" height="20px" />
         </div>
         <div className='form-body'>
           <div className='signup-signin-view-toggle-buttons'>
