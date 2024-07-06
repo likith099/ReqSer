@@ -1,0 +1,137 @@
+/* ExpandedServiceItem.css */
+.expanded-service-item-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .expanded-service-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+  
+  .close-button {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    position: absolute;
+    top: -50px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .close-button:hover{
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+  
+  .expanded-service-item-img-container {
+    width: 360px;
+    text-align: left;
+  }
+  
+  .expanded-service-item-image {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .expanded-service-item-content {
+    margin-left: 20px;
+    text-align: left;
+  }
+  
+  .expanded-service-item-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .expanded-service-item-desc {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .expanded-service-item-actions {
+    display: flex;
+    justify-content: left;
+    gap: 5px;
+    width: 100%;
+  }
+  
+  .action-button {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: inherit;
+    color: #33c29c;
+    font-weight: 600;
+    border: 2px solid #33c29c;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: 0.3s ease;
+  }
+  
+  .action-button:hover {
+    background: #33c29c;
+    color: #ffffff;
+  }
+
+  .icon{
+    padding: 0 10px;
+  }
+
+  .action-button:hover path{
+    fill: #ffffff;
+  }
+
+  @media (max-width:750px) {
+    .expanded-service-item{
+      display: block;
+    }
+
+    .expanded-service-item-image{
+      width: 305px;
+      overflow: hidden;
+    }
+
+    .expanded-service-item-content {
+      margin-left: 0;
+      text-align: left;
+    }
+
+    .expanded-service-item-title {
+      font-size: 24px;
+      margin-bottom: 10px !important;
+      font-size: 18px !important;
+      
+    }
+    
+    .expanded-service-item-desc {
+      font-size: 14px;
+      margin-bottom: 20px;
+      margin-left: 10px;
+    }
+    .service-display h2 {
+      margin: 10px;
+    }
+  }
+
+
+  

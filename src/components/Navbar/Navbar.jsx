@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import './Navbar.css';
 import Mylogo from '../../assets/requestLogo.svg';
@@ -70,9 +71,11 @@ const Navbar = ({ setShowRegister }) => {
       <div className='navbar-right' ref={menuRef}>
         <img src={assets.search_icon} alt="search" className='navbar-searchicon' />
         <ul className={`navbar-menu ${sidebarOpen ? 'open' : ''}`}>
+          <img src={assets.cross} alt="" width="20px" onClick={toggleSidebar}/>
           <Link to="/" className='menu-item' onClick={() => setSidebarOpen(false)}>Home</Link>
+          <Link to="/ReqSer" className='menu-item' onClick={() => setSidebarOpen(false)}>About</Link>
           <Link to="/request" className='menu-item' onClick={() => setSidebarOpen(false)}>Request</Link>
-          <Link to="#offer-service-page" className='menu-item' onClick={() => setSidebarOpen(false)}>Offer Service</Link>
+
           </ul>
           {!currentUser ? (
             <button onClick={() => setShowRegister(true)} className='signupin'>Sign In</button>

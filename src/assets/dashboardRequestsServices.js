@@ -112,3 +112,39 @@ export const dashboard_services = [
     },
 
 ]
+
+export const dashboard_saved = [
+
+    {
+        user_id: 1,
+        user_email: "admin",
+        user_password: "admin",
+        user_first_name: "Admin",
+        user_last_name: "Admin_lastname",
+        user_country: "Admin Country",
+        user_mobile_number: "1234567890",
+        user_address: "Admin Address",
+        user_description: "This is Admin account",
+        service_title: "Legal Consultation Required",
+        service_image: image_legal,
+        service_description: "Need legal advice for business-related issues.",
+        service_category: "Legal Services"
+    },
+
+    {
+        user_id: 2,
+        user_email: "admin2",
+        user_password: "admin2",
+        user_first_name: "John",
+        user_last_name: "Doe",
+        user_country: "User Country",
+        user_mobile_number: "0987654321",
+        user_address: "User Address",
+        user_description: "This is a User account",
+        service_title: "Welding Services for Gate Repair",
+        service_image: image_legal,
+        service_description: "Hire a professional welder to repair your metal gate.",
+        service_category: "Welding"
+    },
+
+]

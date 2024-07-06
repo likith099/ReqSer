@@ -8,6 +8,9 @@ import cross from './cross.png';
 import profile_icon from './profile_icon.png';
 import back_button from './back_button.png';
 import add_icon from './add_icon.png'
+import save_icon from './save_icon.svg'
+import waiting from './waiting.png'
+import request_image from './request_image.png'
 
 import signup_image from './Signup-image.png';
 import request_form_image from './Reqisst_form_image.png';
@@ -55,7 +58,10 @@ export const assets= {
     request_form_image,
     explore_service_image,
     chat_image,
-    add_icon
+    add_icon,
+    save_icon,
+    waiting,
+    request_image
 }   
 
 

@@ -14,7 +14,7 @@ const UserProfile = () => {
 
     return (
         <div className="profile_main">
-            <ProfileHeader heading={"MY ACOUNT"} />
+            <ProfileHeader heading={"MY ACOUNT"} header_link={"/my-dashboard"} header_link_name={"My Dashboard"}/>
             <div className="profile_body">
                         <div className="profile-sidebar">
                             <div className="profile-view-toggle-buttons">

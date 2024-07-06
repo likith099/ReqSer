@@ -3,7 +3,7 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import './ProfileHeader.css'
 
-function ProfileHeader({heading}) {
+function ProfileHeader({heading, header_link, header_link_name}) {
 
     const { currentUser, logout } = useAuth(); // Access currentUser and logout from AuthContext
     const navigate = useNavigate();
@@ -27,7 +27,7 @@ function ProfileHeader({heading}) {
                             <span className="user_name">{currentUser.first_name} {currentUser.last_name}</span>
                         </div>
                         <div className="header_right">
-                        <Link to="/my-dashboard" className='dropdown-item'>My Dashboard</Link>
+                        <Link to={header_link} className='dropdown-item'>{header_link_name}</Link>
                             <button className="logout_btn" onClick={handleSignOut}>
                                 Sign Out
                             </button>

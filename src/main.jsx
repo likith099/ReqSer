@@ -8,10 +8,12 @@ import RequestContextProvider from './context/RequestContents.jsx'
 import AuthProvider from './context/AuthContext.jsx'
 import DashboardRequestContextProvider from './context/DashboardRequestContents.jsx'
 import DashboardServicesContextProvider from './context/DashboardServiceContents.jsx'
+import DashboardSavedContextProvider from './context/DashboardSavedContents.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <AuthProvider>
+      <DashboardSavedContextProvider>
       <DashboardRequestContextProvider>
         <DashboardServicesContextProvider>
           <ServiceContextProvider>
@@ -21,6 +23,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           </ServiceContextProvider>
         </DashboardServicesContextProvider>
       </DashboardRequestContextProvider>
+      </DashboardSavedContextProvider>
     </AuthProvider>
   </BrowserRouter>
 )

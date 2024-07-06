@@ -3,16 +3,18 @@
 .location-modal {
     position: fixed;
     top: 70px;
-    left: 55%;
+    left: 48%;
     right: auto;
     bottom: auto;
-    background: #ffffff;
+    background: #ffffffce;
+    backdrop-filter: blur(20px);
     padding: 20px;
     border-radius: 10px;
     outline: none;
     width: 300px;
-    z-index: 1;
-    box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.307);
+    z-index: 1000;
+    border: 1px solid rgb(51, 194, 156);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.226);
   }
 
 .location-modal h2{

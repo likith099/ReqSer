@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Request.css';
-import { service_list_cat } from '../../assets/assets';
+import { assets, service_list_cat } from '../../assets/assets';
 
 const categories = service_list_cat.map(item => item.service_name);
 
@@ -59,7 +59,7 @@ const RequestForm = () => {
         <h2>Post Your Request</h2>
         <form onSubmit={handleSubmit} className="request-form">
           <div className={`form-group ${errors.heading ? 'error' : ''}`}>
-            <label htmlFor="heading">Heading</label>
+            <label htmlFor="heading">Title</label>
             <input
               type="text"
               id="heading"
@@ -124,6 +124,24 @@ const RequestForm = () => {
             <button type="submit" className="submit-button">Submit Request</button>
           </div>
         </form>
+      </div>
+      <div className="content-section">
+        <h2>Get the Services You Need on ReqSer</h2>
+        <div className="content-item">
+          <h3>Wide Range of Services</h3>
+          <p>Choose from a variety of services offered by professionals in your area.</p>
+        </div>
+        <div className="content-item">
+          <h3>Easy and Convenient</h3>
+          <p>Post your service request and get responses from service providers quickly and efficiently.</p>
+        </div>
+        <div className="content-item">
+          <h3>Competitive Pricing</h3>
+          <p>Find the best value for your money with our transparent pricing and reliable service providers.</p>
+        </div>
+        <div className="content-item">
+          <img src={assets.request_image} width="360px" />
+        </div>
       </div>
     </div>
   );

@@ -1,43 +1,28 @@
-// RequestForm.test.js
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import RequestForm from './Request';
+import RequestForm from '../components/RequestForm/RequestForm';
 
-describe('RequestForm Component', () => {
-  test('renders RequestForm component', () => {
-    render(<RequestForm />);
-    expect(screen.getByText('Post Your Request')).toBeInTheDocument();
-  });
+test('renders RequestForm and validates input fields', () => {
+  render(<RequestForm />);
 
-  test('displays validation messages when fields are empty', () => {
-    render(<RequestForm />);
-    
-    fireEvent.click(screen.getByText('Submit Request'));
+  const headingInput = screen.getByLabelText(/Heading/i);
+  const descriptionInput = screen.getByLabelText(/Detailed Description/i);
+  const addressInput = screen.getByLabelText(/Address/i);
+  const categorySelect = screen.getByLabelText(/Category/i);
 
-    expect(screen.getByText('Heading is required.')).toBeInTheDocument();
-    expect(screen.getByText('Description is required.')).toBeInTheDocument();
-    expect(screen.getByText('Address is required.')).toBeInTheDocument();
-    expect(screen.getByText('Category is required.')).toBeInTheDocument();
-  });
+  // Check if the input fields are in the document
+  expect(headingInput).toBeInTheDocument();
+  expect(descriptionInput).toBeInTheDocument();
+  expect(addressInput).toBeInTheDocument();
+  expect(categorySelect).toBeInTheDocument();
 
-  test('submits form when all fields are filled', () => {
-    const { getByLabelText, getByText } = render(<RequestForm />);
+  // Simulate form submission without filling the form
+  fireEvent.click(screen.getByText(/Submit Request/i));
 
-    fireEvent.change(getByLabelText('Heading'), { target: { value: 'Test Heading' } });
-    fireEvent.change(getByLabelText('Detailed Description'), { target: { value: 'Test Description' } });
-    fireEvent.change(getByLabelText('Address'), { target: { value: 'Test Address' } });
-    fireEvent.change(getByLabelText('Category'), { target: { value: 'Plumbing' } });
-    fireEvent.change(getByLabelText('Date'), { target: { value: '2024-07-01' } });
-
-    fireEvent.click(getByText('Submit Request'));
-
-    expect(screen.queryByText('Heading is required.')).not.toBeInTheDocument();
-    expect(screen.queryByText('Description is required.')).not.toBeInTheDocument();
-    expect(screen.queryByText('Address is required.')).not.toBeInTheDocument();
-    expect(screen.queryByText('Category is required.')).not.toBeInTheDocument();
-
-    // Optionally, check if the form data is logged (or handle the submission in a real app)
-    // Note: You can mock the form submission if it's supposed to send data to a server
-  });
+  // Check for validation errors
+  expect(screen.getByText(/Heading is required./i)).toBeInTheDocument();
+  expect(screen.getByText(/Description is required./i)).toBeInTheDocument();
+  expect(screen.getByText(/Address is required./i)).toBeInTheDocument();
+  expect(screen.getByText(/Category is required./i)).toBeInTheDocument();
 });

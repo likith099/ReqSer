@@ -3,6 +3,7 @@ import './ReqSer.css'
 import serviceRequestImg from './header-image.jpeg'
 import { assets } from '../../assets/assets';
 import { Link } from 'react-router-dom';
+import ReviewCarousel from '../../components/Reviews/Reviews';
 
 function ReqSer() {
     return (
@@ -19,7 +20,7 @@ function ReqSer() {
 
             </section>
             <section className='section-body-part'>
-                <div className="card-row">
+                <div className="how-it-works-process">
                     <div className="card">
                         <div className="card-body">
                             <div className='card-description'>
@@ -54,12 +55,38 @@ function ReqSer() {
                                 <p className="card-text">Connect with service providers and others directly on the app.</p>
                             </div>
                             <div className='card-image'> <img src={assets.chat_image} alt="" /></div>
-
                         </div>
                     </div>
                 </div>
-
             </section>
+            <section className="learn-request-service-section">
+                <div className="learn-container">
+                    <h5>LEARN BUYING AND SELLING BEST PRACTICES</h5>
+                    <div className="learn-body">
+                        <div className="learn-request-tips-section">
+                                <picture>
+                                    <img src="https://about.offerup.com/wp-content/uploads/2017/12/icon-pig.png" alt="profile" width="72px" height="64px"/>
+                                </picture>
+                                <h1 >Service Request Tips</h1>
+                                <p>Find out how to successfully request for services you need.</p>
+                                <a href="" className="learn-more-button" >More</a>
+                        </div>
+                        <div className='learn-divider'></div>
+                        <div className="learn-request-tips-section">
+            
+                                <picture>
+                                    <img src="https://about.offerup.com/wp-content/uploads/2017/12/icon-selling.png" alt="profile" width="72px" height="64px"/>
+                                </picture>
+                                <h1>Service Offer Tips</h1>
+                                <p >Get tips on how to engage with people who are requesting for your service.</p>
+                                <a href="" className="learn-more-button">More</a>
+                           
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <ReviewCarousel />
+
         </main>
     );
 };
