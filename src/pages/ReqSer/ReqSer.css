@@ -97,11 +97,28 @@ body{
     background-color: inherit;
     box-sizing: border-box;
   }
-  
+
+  .card-body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    gap: 180px;
+  }
+
+  .card:nth-child(even) .card-description {
+    order: 2;
+}
+
+.card:nth-child(even) .card-image {
+    order: 1;
+}
 
   .card-description{
-    text-align: center;
+    text-align: left;
     box-sizing: border-box;
+    width: 400px;
   }
   
   .card-title {
@@ -220,6 +237,13 @@ body{
     .card-text {
         font-size: 14px;
     }
+    .card:nth-child(even) .card-description {
+        order: 1;
+    }
+    
+    .card:nth-child(even) .card-image {
+        order: 1;
+    }
 }
 
 
@@ -254,6 +278,14 @@ body{
         flex-direction: column;
         gap: 50px;
       }
+
+      .card:nth-child(even) .card-description {
+        order: 1;
+    }
+    
+    .card:nth-child(even) .card-image {
+        order: 1;
+    }
 }
 
 @media (max-width: 550px) {
@@ -268,8 +300,11 @@ body{
         width: 100%;
     }
 
+    .card-description {
+        text-align: center;
+    }
     .card-body img{
-        width: 320px;
+        width: 280px;
     }
 
     .learn-request-service-section{
@@ -297,5 +332,13 @@ body{
         font-size: 16px;
         width: 280px;
       }
+
+      .card:nth-child(even) .card-description {
+        order: 1;
+    }
+    
+    .card:nth-child(even) .card-image {
+        order: 1;
+    }
 
   }

@@ -90,7 +90,15 @@
   .action-button:hover {
     background: #33c29c;
     color: #ffffff;
+    
   }
+
+  .action-button:hover svg {
+      
+      filter: drop-shadow(1px 1px 5px rgba(0,0,0,0.4));  
+  
+    }
+  
 
   .icon{
     padding: 0 10px;

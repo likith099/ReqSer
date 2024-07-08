@@ -64,23 +64,23 @@ function ReqSer() {
                     <h5>LEARN BUYING AND SELLING BEST PRACTICES</h5>
                     <div className="learn-body">
                         <div className="learn-request-tips-section">
-                                <picture>
-                                    <img src="https://about.offerup.com/wp-content/uploads/2017/12/icon-pig.png" alt="profile" width="72px" height="64px"/>
-                                </picture>
-                                <h1 >Service Request Tips</h1>
-                                <p>Find out how to successfully request for services you need.</p>
-                                <a href="" className="learn-more-button" >More</a>
+                            <picture>
+                                <img src="https://about.offerup.com/wp-content/uploads/2017/12/icon-pig.png" alt="profile" width="72px" height="64px" />
+                            </picture>
+                            <h1 >Service Request Tips</h1>
+                            <p>Find out how to successfully request for services you need.</p>
+                            <a href="" className="learn-more-button" >More</a>
                         </div>
                         <div className='learn-divider'></div>
                         <div className="learn-request-tips-section">
-            
-                                <picture>
-                                    <img src="https://about.offerup.com/wp-content/uploads/2017/12/icon-selling.png" alt="profile" width="72px" height="64px"/>
-                                </picture>
-                                <h1>Service Offer Tips</h1>
-                                <p >Get tips on how to engage with people who are requesting for your service.</p>
-                                <a href="" className="learn-more-button">More</a>
-                           
+
+                            <picture>
+                                <img src="https://about.offerup.com/wp-content/uploads/2017/12/icon-selling.png" alt="profile" width="72px" height="64px" />
+                            </picture>
+                            <h1>Service Offer Tips</h1>
+                            <p >Get tips on how to engage with people who are requesting for your service.</p>
+                            <a href="" className="learn-more-button">More</a>
+
                         </div>
                     </div>
                 </div>
