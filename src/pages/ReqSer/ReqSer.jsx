@@ -61,7 +61,7 @@ function ReqSer() {
             </section>
             <section className="learn-request-service-section">
                 <div className="learn-container">
-                    <h5>LEARN BUYING AND SELLING BEST PRACTICES</h5>
+                    <h5>LEARN HOW TO REQUEST AND OFFER BEST SERVICES</h5>
                     <div className="learn-body">
                         <div className="learn-request-tips-section">
                             <picture>
